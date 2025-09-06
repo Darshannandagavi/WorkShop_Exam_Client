@@ -71,7 +71,7 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import AOS from "aos";
 import "aos/dist/aos.css";
-import { Tilt } from "react-tilt";
+
 
 const Register = () => {
   const [formData, setFormData] = useState({
@@ -141,16 +141,7 @@ const Register = () => {
 
   return (
     <div className="register-container" data-aos="fade-up" style={{marginTop:"100px"}}>
-      <Tilt
-        className="Tilt"
-        options={{
-          max: 5,
-          scale: 1.15,
-          speed: 300,
-          reverse: true,
-          glare: true,
-        }}
-      >
+      
         <div className="register-card">
           <div className="register-header">
             <h2>Create Your Account ✨</h2>
@@ -284,7 +275,7 @@ const Register = () => {
             Already have an account? <a href="/login">Login here 👉</a>
           </div>
         </div>
-      </Tilt>
+      
 
       <style jsx>{`
         .Tilt {
