@@ -11,7 +11,7 @@ const ForgotPassword = () => {
         setIsLoading(true);
         
         try {
-            const res = await axios.post("http://localhost:8000/api/users/forgot-password", { email });
+            const res = await axios.post("https://ligand-software-solutions.onrender.com/api/users/forgot-password", { email });
             setMessage(res.data.message);
         } catch (err) {
             setMessage(err.response?.data?.error || "Something went wrong");

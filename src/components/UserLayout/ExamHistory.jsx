@@ -23,7 +23,7 @@ export default function ExamHistory() {
     async function fetchHistory() {
       try {
         const res = await axios.get(
-          `http://localhost:8000/api/attempts/student/${studentId}`
+          `https://ligand-software-solutions.onrender.com/api/attempts/student/${studentId}`
         );
         setAttempts(res.data);
         console.log("Exam attempts:", res.data);

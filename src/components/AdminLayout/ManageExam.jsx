@@ -37,7 +37,7 @@ export default function ManageExam() {
   // Fetch all exams
   const fetchExams = async () => {
     try {
-      const res = await axios.get("http://localhost:8000/api/exams/examsforadmin");
+      const res = await axios.get("https://ligand-software-solutions.onrender.com/api/exams/examsforadmin");
       setExams(res.data);
       setFilteredExams(res.data);
     } catch (err) {
@@ -123,11 +123,11 @@ export default function ManageExam() {
 
       if (editingExamId) {
         await axios.put(
-          `http://localhost:8000/api/exams/${editingExamId}`,
+          `https://ligand-software-solutions.onrender.com/api/exams/${editingExamId}`,
           sanitizedData
         );
       } else {
-        await axios.post("http://localhost:8000/api/exams", sanitizedData);
+        await axios.post("https://ligand-software-solutions.onrender.com/api/exams", sanitizedData);
       }
 
       setFormData({
@@ -169,7 +169,7 @@ export default function ManageExam() {
   const deleteExam = async (id) => {
     if (window.confirm("Are you sure you want to delete this exam?")) {
       try {
-        await axios.delete(`http://localhost:8000/api/exams/${id}`);
+        await axios.delete(`https://ligand-software-solutions.onrender.com/api/exams/${id}`);
         fetchExams();
       } catch (err) {
         console.error(err);
@@ -199,7 +199,7 @@ export default function ManageExam() {
   const updateExamVisibility = async (id, visibility) => {
     try {
       const exam = exams.find((exam) => exam._id === id);
-      await axios.put(`http://localhost:8000/api/exams/${id}`, {
+      await axios.put(`https://ligand-software-solutions.onrender.com/api/exams/${id}`, {
         ...exam,
         visibility,
       });

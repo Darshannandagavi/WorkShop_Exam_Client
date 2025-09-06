@@ -31,7 +31,7 @@
 //         }
 
 //         try {
-//             const res = await axios.post("http://localhost:8000/api/users/register", data, {
+//             const res = await axios.post("https://ligand-software-solutions.onrender.com/api/users/register", data, {
 //                 headers: { "Content-Type": "multipart/form-data" }
 //             });
 //             setMessage(res.data.message);
@@ -114,7 +114,7 @@ const Register = () => {
 
     try {
       const res = await axios.post(
-        "http://localhost:8000/api/users/register",
+        "https://ligand-software-solutions.onrender.com/api/users/register",
         data,
         {
           headers: { "Content-Type": "multipart/form-data" },

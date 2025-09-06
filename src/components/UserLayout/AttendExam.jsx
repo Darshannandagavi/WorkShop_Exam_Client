@@ -42,7 +42,7 @@
 //     async function fetchExams() {
 //       try {
 //         setIsLoading(true);
-//         const res = await axios.get("http://localhost:8000/api/exams");
+//         const res = await axios.get("https://ligand-software-solutions.onrender.com/api/exams");
 //         setExams(res.data);
 //       } catch (err) {
 //         console.error(err);
@@ -102,7 +102,7 @@
 //       };
 
 //       const res = await axios.post(
-//         "http://localhost:8000/api/attempts/submit",
+//         "https://ligand-software-solutions.onrender.com/api/attempts/submit",
 //         payload
 //       );
 
@@ -980,7 +980,7 @@ export default function AttendExam() {
   useEffect(() => {
     async function fetchExams() {
       try {
-        const res = await axios.get("http://localhost:8000/api/exams");
+        const res = await axios.get("https://ligand-software-solutions.onrender.com/api/exams");
         setExams(res.data);
       } catch (err) {
         console.error("Error fetching exams:", err);
@@ -1094,7 +1094,7 @@ export default function AttendExam() {
       };
 
       const res = await axios.post(
-        "http://localhost:8000/api/attempts/submit",
+        "https://ligand-software-solutions.onrender.com/api/attempts/submit",
         payload
       );
 
