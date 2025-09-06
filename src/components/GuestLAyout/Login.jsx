@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import AOS from "aos";
 import "aos/dist/aos.css";
-import { Tilt } from "react-tilt";
+
 import {
   FaEnvelope,
   FaLock,
@@ -59,16 +59,7 @@ const Login = () => {
 
   return (
     <div className="login-container" data-aos="fade-up">
-      <Tilt
-        className="Tilt"
-        options={{
-          max: 15,
-          scale: 1.05,
-          speed: 300,
-          reverse: true,
-          glare: true,
-        }}
-      >
+     
         <div className="login-card Tilt-inner">
           <div className="login-header">
             <h2>Welcome Back!</h2>
@@ -158,7 +149,7 @@ const Login = () => {
             </a>
           </div>
         </div>
-      </Tilt>
+     
 
       <style jsx>{`
         .Tilt {
